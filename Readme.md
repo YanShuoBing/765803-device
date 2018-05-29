@@ -1,6 +1,6 @@
 # Личный проект «Девайс»
 
-* Студент: [Yan Serbin](https://up.htmlacademy.ru/htmlcss/21/user/765803).
+* Студент: [Ян Сербин](https://up.htmlacademy.ru/htmlcss/21/user/765803).
 * Наставник: [Александр Уразаев](https://htmlacademy.ru/profile/urazaev).
 
 ---
