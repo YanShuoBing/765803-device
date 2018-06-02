@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <img src="logo.svg">
+    <form>
+      <input type="search" placeholder="Поиск по сайту">
+      <input type="submit" value="Найти">
+    </form>
+    <ul>
+      <li>
+        <a href="">Валентин Петухов</a>
+      </li>
+      <li>
+        <a href="">Выйти</a>
+      </li>
+      <li>
+        <a href="">Сравнить</a>
+      </li>
+      <li>
+        <a href="">Корзина</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="">Каталог товаров</a>
+      </li>
+      <li>
+        <a href="">Доставка</a>
+      </li>
+      <li>
+        <a href="">Гарантия</a>
+      </li>
+      <li>
+        <a href="">Контакты</a>
+      </li>
+    </ul>
+  </header>
+  <main class="page-content">
+    <h1>Моноподы для селфи</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="">Главная</a> ></li>
+        <li>
+          <a href="">Каталог</a> ></li>
+        <li>
+          Моноподы для селфи
+        </li>
+      </ul>
+    </nav>
+    <section class="filters">
+      <header class="filters__header">
+        <h2>Фильтр:</h2>
+      </header>
+      <form>
+        <h3>Стоимость</h3>
+        <input type="range">
+        <h3>Цвет</h3>
+        <input type="checkbox">
+        <label>Черный</label>
+        <input type="checkbox">
+        <label>Белый</label>
+        <input type="checkbox">
+        <label>Синий</label>
+        <input type="checkbox">
+        <label>Красный</label>
+        <input type="checkbox">
+        <label>Розовый</label>
+        <h3>Bluetooth</h3>
+        <input type="radio">
+        <label>Есть</label>
+        <input type="radio">
+        <label>Нет</label>
+        <button type="submit">Показать</button>
+      </form>
+      <!-- 3. Черновик формы. Все необходимые атрибуты пропишу позже. Да и есть сомнения по поводу заголовков. Буду ждать занятия на эту тему, чтобы освежить знания. Далее пробую полноценно применять классы по БЭМу, жду комментариев, а потом применю ко всему остальному документу.-->
+    </section>
+    <section class="catalog">
+      <header class="catalog-sort">
+        <h2 class="catalog-sort__heading">Сортировка</h2>
+        <button class="catalog-sort__item" type="button">По цене</button>
+        <button class="catalog-sort__item" type="button">По типу</button>
+        <button class="catalog-sort__item" type="button">По популярности</button>
+        <button class="catalog-sort__item" type="button">Снизу</button>
+        <button class="catalog-sort__item" type="button">Сверху</button>
+      </header>
+      <ul class="products-list">
+      <li class="product">
+        <p class="product__description">
+            <img class="product__image" src="product__image-1.img" width="360" height="380">
+        </p>
+        <h3 class="product__name">
+          <a class="product__link" href="">Любительская селфи-палка</a>
+        </h3>
+        <span class="product__price">500 руб.</span>
+    </li>
+      <li class="product">
+        <p class="product__description">
+            <img class="product__image" src="product__image-2.img" width="360" height="380">
+        </p>
+        <h3 class="product__name">
+          <a class="product__link" href="">Профессиональная селфи-палка</a>
+        </h3>
+        <span class="product__price">1500 руб.</span>
+    </li>
+      <li class="product">
+        <p class="product__description">
+            <img class="product__image" src="product__image-3.img" width="360" height="380">
+        </p>
+        <h3 class="product__name">
+          <a class="product__link" href="">Непотопляемая селфи-палка</a>
+        </h3>
+        <span class="product__price">2500 руб.</span>
+    </li>
+      <li class="product product--new">
+        <p class="product__description">
+            <img class="product__image" src="product__image-4.img" width="360" height="380">
+        </p>
+        <h3 class="product__name">
+          <a class="product__link" href="">Селфи-палка &laquo;Следуй за мной&raquo;</a>
+        </h3>
+        <span class="product__price">4900 руб.</span>
+      </li>
+    </ul>
+        <ul class="pagination">
+            <li class="pagination__item">
+                    <a class="pagination__link" href="">Назад</a>
+            </li>
+          <li class="pagination__item pagination__item--current">
+            <a class="pagination__link" href="">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="">3</a>
+          </li>
+          <li class="pagination__item">
+                <a class="pagination__link" href="">Вперед</a>
+          </li>
+          <!-- На этом месте остановлюсь с использованем БЭМа до комментариев. -->
+        </ul>    
+    </section>
+  </main>
+  <footer class="page-footer">
+    <img class="logo" src="logo.svg">
+    <ul class="">
+      <li>
+        <a href="">Валентин Петухов</a>
+      </li>
+      <li>
+        <a href="">Выйти</a>
+      </li>
+      <li>
+        <a href="">Сравнить</a>
+      </li>
+      <li>
+        <a href="">Корзина</a>
+      </li>
+    </ul>
+    <span>г. Москва, ул. Строителей, 15</span>
+    <ul>
+      <li>
+        <a href="">Доставка</a>
+      </li>
+      <li>
+        <a href="">Гарантия</a>
+      </li>
+      <li>
+        <a href="">Контакты</a>
+      </li>
+    </ul>
+    <span>Тел.: +7(495)495-95-95</span>
+    <a href="">Facebook</a>
+    <a href="">Instagram</a>
+    <a href="">Twitter</a>
+    <img src="academy.svg">
+  </footer>
+</body>
+
+</html>
