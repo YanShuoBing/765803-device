@@ -27,16 +27,16 @@
           <a class="site-nav-list__link" href="#">Каталог товаров</a>
           <div class="catalog-dropdown">
               <ul class="catalog-dropdown__list">
-                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Виртуальная реальность</a></li>
-                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Моноподы для селфи</a></li>
-                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Экшн-камеры</a></li>
+                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Виртуальная реальность</a></li>
+                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Моноподы для селфи</a></li>
+                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Экшн-камеры</a></li>
                 </ul>
                 <ul class="catalog-dropdown__list">
-                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Фитнес-браслеты</a></li>
-                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Умные часы</a></li>
+                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Фитнес-браслеты</a></li>
+                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Умные часы</a></li>
                 </ul>
                 <ul class="catalog-dropdown__list">
-                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Квадрокоптеры</a></li>
+                  <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Квадрокоптеры</a></li>
                 </ul>
           </div>
         </li>
@@ -54,40 +54,40 @@
       <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a> > </li>
       <li class="breadcrumbs__item"><a class="breadcrumbs__link">Моноподы для селфи</a></li>
     </ul>
-    <section class="filters">
-      <header class="filters__header header"><h2 class="header__title">Фильтр:</h2></header>
-      <form class="filters__form catalog-filters">
-        <h3 class="catalog-filters__title">Стоимость</h3>
-        <input class="catalog-filters__input catalog-filters__input--range" type="range">
-        <h3 class="catalog-filters__title">Цвет</h3>
-        <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="catalog-filters__label">Черный</label>
-        <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="catalog-filters__label">Белый</label>
-        <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="catalog-filters__label">Синий</label>
-        <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="catalog-filters__label">Красный</label>
-        <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="catalog-filters__label">Розовый</label>
-        <h3 class="catalog-filters__title">Bluetooth</h3>
-        <input class="catalog-filters__input catalog-filters__input--radio" type="radio">
-        <label class="catalog-filters__label">Есть</label>
-        <input class="catalog-filters__input catalog-filters__input--radio" type="radio">
-        <label class="catalog-filters__label">Нет</label>
+    <section class="catalog-filters catalog">
+      <header class="catalog-filters__header"><h2 class="catalog__title">Фильтр:</h2></header>
+      <form class="catalog-filters__form filters-form">
+        <h3 class="filters-form__title">Стоимость</h3>
+        <input class="filters-form__input catalog-filters__input--range" type="range">
+        <h3 class="filters-form__title">Цвет</h3>
+        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
+        <label class="filters-form__label">Черный</label>
+        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
+        <label class="filters-form__label">Белый</label>
+        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
+        <label class="filters-form__label">Синий</label>
+        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
+        <label class="filters-form__label">Красный</label>
+        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
+        <label class="filters-form__label">Розовый</label>
+        <h3 class="filters-form__title">Bluetooth</h3>
+        <input class="filters-form__input catalog-filters__input--radio" type="radio">
+        <label class="filters-form__label">Есть</label>
+        <input class="filters-form__input catalog-filters__input--radio" type="radio">
+        <label class="filters-form__label">Нет</label>
         <button class="button" type="submit">Показать</button>
       </form>
     </section>
     <section class="catalog">
-      <header class="sort header">
-        <h2 class="header__title">Сортировка:</h2>
-        <a class="sort__item sort__item--active" href="#">По цене</a>
-        <a class="sort__item" href="#">По типу</a>
-        <a class="sort__item" href="#">По популярности</a>
-        <a class="sort__item" href="#">Снизу</a>
-        <a class="sort__item sort__item--active" href="#">Сверху</a>
+      <header class="catalog-sort">
+        <h2 class="catalog__title">Сортировка:</h2>
+        <a class="catalog-sort__item catalog-sort__item--active" href="#">По цене</a>
+        <a class="catalog-sort__item" href="#">По типу</a>
+        <a class="catalog-sort__item" href="#">По популярности</a>
+        <a class="catalog-sort__item" href="#">Снизу</a>
+        <a class="catalog-sort__item catalog-sort__item--active" href="#">Сверху</a>
       </header>
-      <ul class="goods-list">
+      <ul class="catalog__goods goods-list">
         <li class="goods-list__item">
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture">
@@ -149,7 +149,7 @@
           </article>
         </li>
       </ul>
-      <ul class="pagination">
+      <ul class="catalog__pagination pagination">
         <li class="pagination__item"><a class="pagination__link" href="#">Назад</a></li>
         <li class="pagination__item pagination__item--current"><a class="pagination__link" href="#">1</a></li>
         <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>

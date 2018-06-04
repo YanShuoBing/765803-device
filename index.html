@@ -9,7 +9,7 @@
 <body>
   <header class="page-header">
     <nav class="page-nav">
-      <a class="logo-link" href="index.html"><img class="logo-link__image" src="img/logo.svg"></a>
+      <a class="logo-link"><img class="logo-link__image" src="img/logo.svg"></a>
       <ul class="user-nav-list">
         <li class="user-nav-list__item">
           <form class="search-form">
@@ -26,16 +26,16 @@
           <a class="site-nav-list__link" href="#">Каталог товаров</a>
           <div class="catalog-dropdown">
             <ul class="catalog-dropdown__list">
-              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Виртуальная реальность</a></li>
-              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Моноподы для селфи</a></li>
-              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Экшн-камеры</a></li>
+              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Виртуальная реальность</a></li>
+              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Моноподы для селфи</a></li>
+              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Экшн-камеры</a></li>
             </ul>
             <ul class="catalog-dropdown__list">
-              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Фитнес-браслеты</a></li>
-              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Умные часы</a></li>
+              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Фитнес-браслеты</a></li>
+              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Умные часы</a></li>
             </ul>
             <ul class="catalog-dropdown__list">
-              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link">Квадрокоптеры</a></li>
+              <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Квадрокоптеры</a></li>
             </ul>
           </div>
         </li>
@@ -99,7 +99,7 @@
       </ul>
     </section>
     <section class="categories section">
-      <h2 class="section-title section-title--hidden">Разделы каталога</h2>
+      <h2 class="section__title section__title--hidden">Разделы каталога</h2>
       <ul class="categories__list">
         <li class="categories__item"><a class="categories__link" href="#">Виртуальная реальность</a></li>
         <li class="categories__item"><a class="categories__link" href="#">Моноподы для селфи</a></li>
@@ -110,7 +110,7 @@
       </ul>
     </section>
     <section class="features section">
-      <h2 class="section-title section-title--hidden">Преимущества</h2>
+      <h2 class="section__title section__title--hidden">Преимущества</h2>
       <ul class="features__menu">
         <li class="features__button"><button class="button" type="button">Доставка</button></li>
         <li class="features__button"><button class="button" type="button">Гарантия</button></li>
@@ -123,19 +123,19 @@
             поднимая его на ваш этаж.</p>
         </li>
         <li class="features__item">
-          <h3 class="section-title">Гарантия</h3>
+          <h3 class="section__title">Гарантия</h3>
           <p class="section-text">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.
             <br>Товар, не дом, конечно же.</p>
         </li>
         <li class="features__item">
-          <h3 class="section-title">Кредит</h3>
+          <h3 class="section__title">Кредит</h3>
           <p class="section-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
             Выгодные для нашего банка, разумеется.</p>
         </li>
       </ul>
     </section>
     <section class="brands section">
-      <h2 class="section__title section-title--hidden">Бренды нашего магазина</h2>
+      <h2 class="section__title section__title--hidden">Бренды нашего магазина</h2>
       <ul class="brands__list">
         <li class="brands__item"><a class="brands__link" href="#">DJI</a></li>
         <li class="brands__item"><a class="brands__link" href="#">SP Gadgets</a></li>
@@ -144,7 +144,7 @@
       </ul>
     </section>
     <section class="about-us section">
-      <h2 class="section-title">О нас</h2>
+      <h2 class="section__title">О нас</h2>
       <p class="section__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
       <p class="section__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
       <ul class="partners-list">
@@ -162,7 +162,7 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a class="logo-link" href="index.html"><img class="logo-link__image" src="img/logo.svg"></a>
+    <a class="logo-link"><img class="logo-link__image" src="img/logo.svg"></a>
     <ul class="user-nav-list">
       <li class="user-nav-list__item"><a class="user-nav-list__link" href="#">Войти</a></li>
       <li class="user-nav-list__item"><a class="user-nav-list__link" href="#">Сравнить</a></li>
@@ -182,12 +182,12 @@
     </ul>
     <a class="academy-logo-link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="academy-logo-link__image" src="img/academy.svg"></a>
   </footer>
-  <section class="location">
-    <h2 class="section-title section-title--hidden">Адрес магазина</h2>
+  <section class="location section">
+    <h2 class="section__title section__title--hidden">Адрес магазина</h2>
     <iframe class="location__map"></iframe>
   </section>
-  <section class="write-us">
-    <h2 class="section-title section-title--hidden">Форма обратной связи</h2>
+  <section class="write-us section">
+    <h2 class="section__title section__title--hidden">Форма обратной связи</h2>
     <button class="close-button" type="button">Закрыть</button>
     <form class="write-us__form feedback-form">
       <label class="feedback-form__label"><b>Ваше имя:</b></label>
