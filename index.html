@@ -9,7 +9,7 @@
 <body>
   <header class="page-header">
     <nav class="page-nav">
-      <a class="logo-link"><img class="logo-link__image" src="img/logo.svg"></a>
+      <a class="logo-link"><img class="logo-link__image" src="img/header-logo.svg" width="164" height="36"></a>
       <ul class="user-nav-list">
         <li class="user-nav-list__item">
           <form class="search-form">
@@ -23,7 +23,7 @@
       </ul>
       <ul class="site-nav-list">
         <li class="site-nav-list__item">
-          <a class="site-nav-list__link" href="#">Каталог товаров</a>
+          <a class="site-nav-list__link" href="catalog.html">Каталог товаров</a>
           <div class="catalog-dropdown">
             <ul class="catalog-dropdown__list">
               <li class="catalog-dropdown__item"><a class="catalog-dropdown__link" href="#">Виртуальная реальность</a></li>
@@ -50,8 +50,9 @@
       <h2 class="section__title section__title--hidden">Популярные товары</h2>
       <ul class="popular__slider slider">
         <li class="slider__item">
-          <b class="section__title">Делай селфи,
-            <br>как Бен Стиллер!</b>
+          <img src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
+          <p class="section__title">Делай селфи,
+            <br>как Бен Стиллер!</p>
           <p class="section__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="button" href="#">Подробнее</a>
           <table class="slider__stats stats-table">
@@ -68,8 +69,9 @@
           </table>
         </li>
         <li class="slider__item">
-          <b class="section__title">Худеем
-            <br>правильно!</b>
+          <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет"> 
+          <p class="section__title">Худеем
+            <br>правильно!</p>
           <p class="section__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="button" href="#">Подробнее</a>
           <table class="slider__stats stats-table">
@@ -82,7 +84,8 @@
           </table>
         </li>
         <li class="slider__item">
-          <b class="section__title">Порхает как бабочка, жалит как пчела!</b>
+          <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+          <p class="section__title">Порхает как бабочка, жалит как пчела!</p>
           <p class="section__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="button" href="#">Подробнее</a>
           <table class="slider__stats stats-table">
@@ -137,10 +140,18 @@
     <section class="brands section">
       <h2 class="section__title section__title--hidden">Бренды нашего магазина</h2>
       <ul class="brands__list">
-        <li class="brands__item"><a class="brands__link" href="#">DJI</a></li>
-        <li class="brands__item"><a class="brands__link" href="#">SP Gadgets</a></li>
-        <li class="brands__item"><a class="brands__link" href="#">GoPro</a></li>
-        <li class="brands__item"><a class="brands__link" href="#">Vive</a></li>
+        <li class="brands__item">
+          <a class="brands__link" href="#"><img class="brands__image" src="img/brands-1.png" alt="DJI" width="260" height="100"></a>
+        </li>
+        <li class="brands__item">
+          <a class="brands__link" href="#"><img class="brands__image" src="img/brands-2.png" alt="SP Gadgets" width="260" height="100"></a>
+        </li>
+        <li class="brands__item">
+          <a class="brands__link" href="#"><img class="brands__image" src="img/brands-3.png" alt="GoPro" width="260" height="100"></a>
+        </li>
+        <li class="brands__item">
+          <a class="brands__link" href="#"><img class="brands__image" src="img/brands-4.png" alt="Vive" width="260" height="100"></a>
+        </li>
       </ul>
     </section>
     <section class="about-us section">
@@ -157,12 +168,12 @@
     <section class="contacts section">
       <h2 class="section__title">Контакты</h2>
       <p class="section__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы можете проверить работоспособность покупки. Всякое бывает.</p>
-      <img src="img/map.img">
+      <img class="contacts__map" src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
       <a class="button" href="#">Напишите нам</a>
     </section>
   </main>
   <footer class="page-footer">
-    <a class="logo-link"><img class="logo-link__image" src="img/logo.svg"></a>
+    <a class="logo-link"><img class="logo-link__image" src="img/footer-logo.svg" width="164" height="36"></a>
     <ul class="user-nav-list">
       <li class="user-nav-list__item"><a class="user-nav-list__link" href="#">Войти</a></li>
       <li class="user-nav-list__item"><a class="user-nav-list__link" href="#">Сравнить</a></li>
@@ -180,7 +191,7 @@
       <li class="socials-list__item socials-list__item--instagram"><a class="socials-list__link" href="#">Instagram</a></li>
       <li class="socials-list__item socials-list__item--twitter"><a class="socials-list__link" href="#">Twitter</a></li>
     </ul>
-    <a class="academy-logo-link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="academy-logo-link__image" src="img/academy.svg"></a>
+    <a class="academy-logo-link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="academy-logo-link__image" src="img/academy-logo.svg" width="27" height="35"></a>
   </footer>
   <section class="location section">
     <h2 class="section__title section__title--hidden">Адрес магазина</h2>
