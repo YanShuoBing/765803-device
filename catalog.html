@@ -9,7 +9,7 @@
 <body>
   <header class="page-header">
     <nav class="page-nav">
-      <a class="logo-link" href="index.html"><img class="logo-link__image" src="img/header-logo.svg" width="164" height="36"></a>
+      <a class="logo-link" href="index.html"><img class="logo-link__image" src="img/header-logo.svg" width="164" height="36" alt="Device"></a>
       <ul class="user-nav-list">
         <li class="user-nav-list__item">
           <form class="search-form">
@@ -43,62 +43,61 @@
         <li class="site-nav-list__item"><a class="site-nav-list__link" href="#">Доставка</a></li>
         <li class="site-nav-list__item"><a class="site-nav-list__link" href="#">Гарантия</a></li>
         <li class="site-nav-list__item"><a class="site-nav-list__link" href="#">Контакты</a></li>
-        </li>
       </ul>
     </nav>
   </header>
   <main class="page-content">
-    <h1 class="page-content__title">Моноподы для селфи</h1>
+    <h1 class="main-title main-title--catalog">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a> > </li>
       <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a> > </li>
       <li class="breadcrumbs__item"><a class="breadcrumbs__link">Моноподы для селфи</a></li>
     </ul>
-    <section class="catalog-filters catalog">
-      <header class="catalog-filters__header"><h2 class="catalog__title">Фильтр:</h2></header>
-      <form class="catalog-filters__form filters-form">
-        <h3 class="filters-form__title">Стоимость</h3>
-        <input class="filters-form__input catalog-filters__input--range" type="range">
-        <h3 class="filters-form__title">Цвет</h3>
-        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="filters-form__label">Черный</label>
-        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="filters-form__label">Белый</label>
-        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="filters-form__label">Синий</label>
-        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="filters-form__label">Красный</label>
-        <input class="filters-form__input catalog-filters__input--checkbox" type="checkbox">
-        <label class="filters-form__label">Розовый</label>
-        <h3 class="filters-form__title">Bluetooth</h3>
-        <input class="filters-form__input catalog-filters__input--radio" type="radio">
-        <label class="filters-form__label">Есть</label>
-        <input class="filters-form__input catalog-filters__input--radio" type="radio">
-        <label class="filters-form__label">Нет</label>
+    <section class="filters section">
+      <header class="filters__header"><h2 class="section__title section__title--catalog">Фильтр:</h2></header>
+      <form class="filters__form">
+        <h3 class="filters__title">Стоимость</h3>
+        <input class="filters__range" type="range">
+        <h3 class="filters__title">Цвет</h3>
+        <input class="filters__checkbox" type="checkbox">
+        <label class="filters__label">Черный</label>
+        <input class="filters__checkbox" type="checkbox">
+        <label class="filters__label">Белый</label>
+        <input class="filters__checkbox" type="checkbox">
+        <label class="filters__label">Синий</label>
+        <input class="filters__checkbox" type="checkbox">
+        <label class="filters__label">Красный</label>
+        <input class="filters__checkbox" type="checkbox">
+        <label class="filters__label">Розовый</label>
+        <h3 class="filters__title">Bluetooth</h3>
+        <input class="filters__radio" type="radio">
+        <label class="filters__label">Есть</label>
+        <input class="filters__radio" type="radio">
+        <label class="filters__label">Нет</label>
         <button class="button" type="submit">Показать</button>
       </form>
     </section>
-    <section class="catalog">
-      <header class="catalog-sort">
-        <h2 class="catalog__title">Сортировка:</h2>
-        <a class="catalog-sort__item catalog-sort__item--active" href="#">По цене</a>
-        <a class="catalog-sort__item" href="#">По типу</a>
-        <a class="catalog-sort__item" href="#">По популярности</a>
-        <a class="catalog-sort__item" href="#">Снизу</a>
-        <a class="catalog-sort__item catalog-sort__item--active" href="#">Сверху</a>
+    <section class="catalog section">
+      <header class="catalog__header sort">
+        <h2 class="section__title section__title--catalog">Сортировка:</h2>
+        <h3 class="sort__item"><a class="sort__link sort__link--active" href="#">По цене</a></h3>
+        <h3 class="sort__item"><a class="sort__link" href="#">По типу</a></h3>
+        <h3 class="sort__item"><a class="sort__link" href="#">По популярности</a></h3>
+        <h3 class="sort__item"><a class="sort__link" href="#">Снизу</a></h3>
+        <h3 class="sort__item"><a class="sort__link sort__link--active" href="#">Сверху</a></h3>
       </header>
       <ul class="catalog__goods goods-list">
         <li class="goods-list__item">
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture">
-              <img class="goods-card__image" src="img/goods-1.jpg" width="360" height="380">
-              <div class="goods-card__picture--hover">
+              <img class="goods-card__image" src="img/goods-1.jpg" width="360" height="380" alt="Селфи-палка с короткой ручкой и креплением для телефона">
+              <div class="goods-card__visually-hidden">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
             </div>
             <div class="goods-card__info">
-              <h3 class="goods-card__title"><a class="goods-card__link" href="#">Любительская селфи-палка</a></h3>
+              <h4 class="goods-card__title"><a class="goods-card__link" href="#">Любительская селфи-палка</a></h4>
               <p class="goods-card__price">500 руб.</p>
             </div>
           </article>
@@ -106,14 +105,14 @@
         <li class="goods-list__item">
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture">
-              <img class="goods-card__image" src="img/goods-2.jpg" width="360" height="380">
-              <div class="goods-card__picture--hover">
+              <img class="goods-card__image" src="img/goods-2.jpg" width="360" height="380" alt="Селфи-палка с регулируемой ручкой и универсальным креплением">
+              <div class="goods-card__visually-hidden">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
             </div>
             <div class="goods-card__info">
-              <h3 class="goods-card__title"><a class="goods-card__link" href="#">Профессиональная селфи-палка</a></h3>
+              <h4 class="goods-card__title"><a class="goods-card__link" href="#">Профессиональная селфи-палка</a></h4>
               <p class="goods-card__price">1500 руб.</p>
             </div>
           </article>
@@ -121,14 +120,14 @@
         <li class="goods-list__item">
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture">
-              <img class="goods-card__image" src="img/goods-3.jpg" width="360" height="380">
-              <div class="goods-card__picture--hover">
+              <img class="goods-card__image" src="img/goods-3.jpg" width="360" height="380" alt="Селфи-палка с прорезиненной ручкой и креплением для экшн-камеры"> 
+              <div class="goods-card__visually-hidden">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
             </div>
             <div class="goods-card__info">
-              <h3 class="goods-card__title"><a class="goods-card__link" href="#">Непотопляемая селфи-палка</a></h3>
+              <h4 class="goods-card__title"><a class="goods-card__link" href="#">Непотопляемая селфи-палка</a></h4>
               <p class="goods-card__price">2500 руб.</p>
             </div>
           </article>
@@ -136,14 +135,14 @@
         <li class="goods-list__item">
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture goods-card__picture--new">
-              <img class="goods-card__image" src="img/goods-4.jpg" width="360" height="380">
-              <div class="goods-card__picture--hover">
+              <img class="goods-card__image" src="img/goods-4.jpg" width="360" height="380" alt="Cелфи-палка с ручкой в виде протянутой руки, частично закрытой рукавом, и регулируемым креплением">
+              <div class="goods-card__visually-hidden">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
             </div>
             <div class="goods-card__info">
-              <h3 class="goods-card__title"><a class="goods-card__link" href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a></h3>
+              <h4 class="goods-card__title"><a class="goods-card__link" href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a></h4>
               <p class="goods-card__price">4900 руб.</p>
             </div>
           </article>
@@ -159,7 +158,7 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a class="logo-link" href="index.html"><img class="logo-link__image" src="img/footer-logo.svg" width="164" height="36"></a>
+    <a class="logo-link" href="index.html"><img class="logo-link__image" src="img/footer-logo.svg" width="164" height="36" alt="Device"></a>
     <ul class="user-nav-list">
       <li class="user-nav-list__item"><a class="user-nav-list__link" href="#">Валентин Петухов</a></li>
       <li class="user-nav-list__item"><a class="user-nav-list__link" href="#">Выйти</a></li>
@@ -178,7 +177,7 @@
         <li class="socials-list__item socials-list__item--instagram"><a class="socials-list__link" href="#">Instagram</a></li>
         <li class="socials-list__item socials-list__item--twitter"><a class="socials-list__link" href="#">Twitter</a></li>
       </ul>
-    <a class="academy-logo-link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="academy-logo-link__image" src="img/academy-logo.svg" width="27" height="35"></a>
+    <a class="academy-logo-link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="academy-logo-link__image" src="img/academy-logo.svg" width="27" height="35" alt="HTML Academy"></a>
   </footer>
 </body>
 
