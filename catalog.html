@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page inner-page--catalog">
   <header class="page-header">
-    <a class="keyboard-shortcut" href="#page-content">Желаете пропустить навигацию и сразу перейти к контенту?</a>
+    <a class="keyboard-shortcut visually-hidden" href="#page-content">Желаете пропустить навигацию и сразу перейти к контенту?</a>
     <nav class="page-nav">
       <a class="logo-link" href="index.html">
         <img class="logo-link__image" src="img/header-logo.svg" width="164" height="36" alt="Текстовый логотип интернет-магазина &laquo;Device&raquo;.">
@@ -16,15 +19,15 @@
       <ul class="user-nav-list">
         <li class="user-nav-list__item">
           <form class="search-form">
-            <input class="search-form__input" type="search" placeholder="Поиск по сайту">
-            <input class="search-form__input" type="submit" value="Найти">
+            <input class="search-form__search" type="search" placeholder="Поиск по сайту">
+            <input class="search-form__submit" type="submit" value="Найти">
           </form>
         </li>
         <li class="user-nav-list__item">
           <a class="user-nav-list__link" href="#">Валентин Петухов</a>
         </li>
         <li class="user-nav-list__item">
-          <a class="user-nav-list__link" href="#">Выйти</a>
+          <a class="user-nav-list__link  user-nav-list__link--sign-out" href="#">Выйти</a>
         </li>
         <li class="user-nav-list__item">
           <a class="user-nav-list__link" href="#">Сравнить</a>
@@ -35,7 +38,7 @@
       </ul>
       <ul class="site-nav-list">
         <li class="site-nav-list__item">
-          <a class="site-nav-list__link" href="#">Каталог товаров</a>
+          <a class="site-nav-list__link site-nav-list__link--hover" href="#">Каталог товаров</a>
           <div class="catalog-dropdown">
             <ul class="catalog-dropdown__list">
               <li class="catalog-dropdown__item">
@@ -76,16 +79,17 @@
     </nav>
   </header>
   <main class="page-content" id="page-content">
-    <h1 class="main-title main-title--catalog">Моноподы для селфи</h1>
+    <h1 class="main-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="index.html">Главная</a> > </li>
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="catalog.html">Каталог</a> > </li>
       <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link">Моноподы для селфи</a>
+        <a class="breadcrumbs__link breadcrumbs__link--current">Моноподы для селфи</a>
       </li>
     </ul>
+    <div class="inner-page__columns">
     <section class="filters section">
       <header class="filters__header">
         <h2 class="section__title section__title--catalog">Фильтр:</h2>
@@ -93,9 +97,9 @@
       <form class="filters__form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="filters__fieldset">
           <legend class="filters__title">Стоимость</legend>
-          <label class="visually-hidden">
+          <label class="filters__label">
             <input class="filters__range" type="range" name="min-price">Минимальная цена</label>
-          <label class="visually-hidden">
+          <label class="filters__label">
             <input class="filters__range" type="range" name="max-price">Максимальная цена</label>
         </fieldset>
         <fieldset class="filters__fieldset">
@@ -139,7 +143,7 @@
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture">
               <img class="goods-card__image" src="img/goods-1.jpg" width="360" height="380" alt="Монопод с короткой ручкой и креплением для телефона.">
-              <div class="goods-card__visually-hidden">
+              <div class="goods-card__buttons">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
@@ -156,7 +160,7 @@
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture">
               <img class="goods-card__image" src="img/goods-2.jpg" width="360" height="380" alt="Монопод с регулируемой ручкой и универсальным креплением.">
-              <div class="goods-card__visually-hidden">
+              <div class="goods-card__buttons">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
@@ -173,7 +177,7 @@
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture">
               <img class="goods-card__image" src="img/goods-3.jpg" width="360" height="380" alt="Монопод с прорезиненной ручкой и креплением для экшн-камеры.">
-              <div class="goods-card__visually-hidden">
+              <div class="goods-card__buttons">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
@@ -190,7 +194,7 @@
           <article class="goods-list__card goods-card">
             <div class="goods-card__picture goods-card__picture--new">
               <img class="goods-card__image" src="img/goods-4.jpg" width="360" height="380" alt="Монопод с ручкой в виде протянутой руки, частично закрытой рукавом, и регулируемым креплением.">
-              <div class="goods-card__visually-hidden">
+              <div class="goods-card__buttons">
                 <button class="goods-card__cart button" type="button">В корзину</button>
                 <button class="goods-card__compare" type="button">Добавить к сравнению</button>
               </div>
@@ -206,10 +210,10 @@
       </ul>
       <ul class="catalog__pagination pagination">
         <li class="pagination__item">
-          <a class="pagination__link" href="#">Назад</a>
+          <a class="pagination__prev-link" href="#">Назад</a>
         </li>
-        <li class="pagination__item pagination__item--current">
-          <a class="pagination__link" href="#">1</a>
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--current">1</a>
         </li>
         <li class="pagination__item">
           <a class="pagination__link" href="#">2</a>
@@ -218,10 +222,11 @@
           <a class="pagination__link" href="#">3</a>
         </li>
         <li class="pagination__item">
-          <a class="pagination__link" href="#">Вперед</a>
+          <a class="pagination__next-link" href="#">Вперед</a>
         </li>
       </ul>
     </section>
+    </div>
   </main>
   <footer class="page-footer">
     <a class="logo-link" href="index.html">
@@ -229,31 +234,31 @@
     </a>
     <ul class="user-nav-list">
       <li class="user-nav-list__item">
-        <a class="user-nav-list__link" href="#">Валентин Петухов</a>
+        <a class="user-nav-list__link user-nav-list__link--footer" href="#">Валентин Петухов</a>
       </li>
       <li class="user-nav-list__item">
-        <a class="user-nav-list__link" href="#">Выйти</a>
+        <a class="user-nav-list__link user-nav-list__link--sign-out" href="#">Выйти</a>
       </li>
       <li class="user-nav-list__item">
-        <a class="user-nav-list__link" href="#">Сравнить</a>
+        <a class="user-nav-list__link user-nav-list__link--footer" href="#">Сравнить</a>
       </li>
       <li class="user-nav-list__item">
-        <a class="user-nav-list__link" href="#">Корзина</a>
+        <a class="user-nav-list__link user-nav-list__link--footer" href="#">Корзина</a>
       </li>
     </ul>
     <p class="page-footer__address">г. Москва, ул. Строителей, 15</p>
     <ul class="site-nav-list">
       <li class="site-nav-list__item">
-        <a class="site-nav-list__link" href="#">Доставка</a>
+        <a class="site-nav-list__link site-nav-list__link--footer" href="#">Доставка</a>
       </li>
       <li class="site-nav-list__item">
-        <a class="site-nav-list__link" href="#">Гарантия</a>
+        <a class="site-nav-list__link site-nav-list__link--footer" href="#">Гарантия</a>
       </li>
       <li class="site-nav-list__item">
-        <a class="site-nav-list__link" href="#">Контакты</a>
+        <a class="site-nav-list__link site-nav-list__link--footer" href="#">Контакты</a>
       </li>
     </ul>
-    <p class="page-footer__phone-number">Тел.: +7(495)495-95-95</p>
+    <p class="page-footer__phone-number">Тел.: +7 (495) 495-95-95</p>
     <ul class="socials-list">
       <li class="socials-list__item socials-list__item--facebook">
         <a class="socials-list__link" href="#">Facebook</a>
