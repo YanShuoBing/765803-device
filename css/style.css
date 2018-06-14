@@ -1,28 +1,28 @@
 /* Общие стили */
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     src: url('../fonts/opensans.woff2') format('woff2'), url('../fonts/opensans.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     src: url('../fonts/opensanslight.woff2') format('woff2'), url('../fonts/opensanslight.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     src: url('../fonts/gilroyextrabold.woff2') format('woff2'), url('../fonts/gilroyextrabold.woff') format('woff');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     src: url('../fonts/gilroylight.woff2') format('woff2'), url('../fonts/gilroylight.woff') format('woff');
     font-weight: 300;
     font-style: normal;
@@ -34,7 +34,7 @@ a {
 
 .inner-page {
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
     line-height: 30px;
     font-weight: 300;
@@ -44,10 +44,10 @@ a {
 
 .button {
     vertical-align: middle;
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: 3.6px;
+    letter-spacing: 0.2em;
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
@@ -74,7 +74,7 @@ a {
 }
 
 .section__title {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 800;
 }
 
@@ -93,12 +93,16 @@ a {
 .section__title--catalog {
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 3.2px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
 }
 
 .section__text {
+    letter-spacing: 0.2px;
     color: #464646;
+}
+.section__text--letter-spacing {
+    letter-spacing: normal;
 }
 
 .logo-link__image:hover {
@@ -169,12 +173,12 @@ a {
 }
 
 .site-nav-list__link {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    letter-spacing: 3.6px;
+    letter-spacing: 0.2em;
 }
 
 .catalog-dropdown__list {
@@ -195,7 +199,7 @@ a {
 }
 
 .page-footer {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
     line-height: 30px;
     font-weight: 300;
@@ -252,7 +256,7 @@ a {
 }
 
 .stats-table__top-cell {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 36px;
     line-height: 38px;
     font-weight: 300;
@@ -278,7 +282,7 @@ a {
 }
 
 .categories__title {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
@@ -313,12 +317,10 @@ a {
 
 .brands__link {
     opacity: 0.2;
-    filter: grayscale(100%);
 }
 
 .brands__link:hover {
     opacity: 1;
-    filter: none;
 }
 
 .partners-list {
@@ -337,7 +339,7 @@ a {
 }
 
 .write-us__label {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
@@ -345,7 +347,7 @@ a {
 
 .write-us__input,
 .write-us__textarea {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     line-height: 18px;
     color: rgba(70, 70, 70, 0.4);
@@ -375,7 +377,7 @@ a {
 /* Стили каталога */
 
 .main-title {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
@@ -415,14 +417,14 @@ a {
 }
 
 .filters__title {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
 }
 
 .filters__label {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     line-height: 40px;
     font-weight: 300;
@@ -449,7 +451,7 @@ a {
 }
 
 .sort__link {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     line-height: 18px;
     color: #000000;
@@ -475,7 +477,7 @@ a {
 }
 
 .goods-card__compare {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 13px;
     line-height: 36px;
     font-weight: 300;
@@ -493,7 +495,7 @@ a {
 }
 
 .goods-card__link {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     color: black;
     font-size: 18px;
     font-weight: 800;
@@ -508,11 +510,12 @@ a {
 .pagination__link,
 .pagination__prev-link,
 .pagination__next-link {
-    font-family: 'Gilroy', sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;
-    letter-spacing: 3.2px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: black;
     opacity: 0.3;
 }
