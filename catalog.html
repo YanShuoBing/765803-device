@@ -91,18 +91,18 @@
     <div class="inner-page__columns inner-page__columns--catalog">
     <section class="filters section">
       <header class="filters__header">
-        <h2 class="section__title section__title--catalog">Фильтр:</h2>
+        <h2 class="section__title filters__title">Фильтр:</h2>
       </header>
       <form class="filters__form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="filters__fieldset">
-          <legend class="filters__title">Стоимость</legend>
+          <legend class="filters__legend">Стоимость</legend>
           <label class="filters__label visually-hidden">
             <input class="filters__range visually-hidden" type="range" name="min-price">Минимальная цена</label>
           <label class="filters__label visually-hidden">
             <input class="filters__range visually-hidden" type="range" name="max-price">Максимальная цена</label>
         </fieldset>
         <fieldset class="filters__fieldset">
-          <legend class="filters__title">Цвет</legend>
+          <legend class="filters__legend">Цвет</legend>
           <label class="filters__label">
             <input class="filters__checkbox filters__checkbox--checked visually-hidden" type="checkbox" name="black" checked>Черный</label>
           <label class="filters__label">
@@ -115,7 +115,7 @@
             <input class="filters__checkbox visually-hidden" type="checkbox" name="pink">Розовый</label>
         </fieldset>
         <fieldset class="filters__fieldset">
-          <legend class="filters__title">Bluetooth</legend>
+          <legend class="filters__legend">Bluetooth</legend>
           <label class="filters__label">
             <input class="filters__radio filters__radio--checked visually-hidden" type="radio" name="bluetooth" value="true" checked>Есть</label>
           <label class="filters__label">
@@ -126,16 +126,18 @@
     </section>
     <section class="catalog section">
       <header class="catalog__header sort">
-        <h2 class="section__title section__title--catalog">Сортировка:</h2>
+        <div class="sort__container">
+        <h2 class="section__title sort__title">Сортировка:</h2>
         <ul class="sort__list">
           <li class="sort__item"><a class="sort__link sort__link--active" href="#">По цене</a></li>
           <li class="sort__item"><a class="sort__link" href="#">По типу</a></li>
           <li class="sort__item"><a class="sort__link" href="#">По популярности</a></li>
         </ul>
-        <ul class="sort__list">
+        <ul class="sort__list visually-hidden">
           <li class="sort__item"><a class="sort__link" href="#">По возрастанию</a></li>
           <li class="sort__item"><a class="sort__link sort__link--active" href="#">По убыванию</a></li>
         </ul>
+        </div>
       </header>
       <ul class="catalog__goods goods-list">
         <li class="goods-list__item">

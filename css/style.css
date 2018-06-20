@@ -90,11 +90,18 @@ a {
     letter-spacing: 0.5px;
 }
 
-.section__title--catalog {
+.filters__title {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+}
+.sort__title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-right: 50px;
 }
 
 .section__text {
@@ -417,7 +424,7 @@ a {
     border-top: 2px solid black;
 }
 
-.filters__title {
+.filters__legend {
     font-family: "Gilroy", sans-serif;
     font-size: 18px;
     font-weight: 800;
@@ -586,10 +593,6 @@ a {
 }
 .inner-page__columns--index {
     justify-content: space-between;
-}
-.inner-page__columns--catalog {
-    display: flex;
-    width: 100%;
 }
 .page-header {
     box-sizing: border-box;
@@ -931,7 +934,8 @@ a {
     margin-left: 2px;
 }
 /* Стили сетки каталога */
-.section__title--catalog {
+.filters__title,
+.catalog__title {
     margin: 0;
 }
 .introductory {
@@ -953,25 +957,30 @@ a {
 .breadcrumbs__item {
     margin-right: 39px;
 }
-.filters {
+.inner-page__columns--catalog {
     display: flex;
-    flex-direction: column;
-    width: 468px;
+    width: 100%;
+}
+.filters {
+    flex-grow: 1;
 }
 .filters__header {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 70px;
-    padding-left: 20px;
-}
-.filters__form {
-    align-self: flex-end;
-    margin-top: 69px;
-    padding-right: 66px;
-    width: 205px;
+    padding-left: 75px;
 }
 .filters__title {
+    margin-left: auto;
+    margin-right: 196px;
+}
+.filters__form {
+    margin-top: 69px;
+    margin-right: 85px;
+    margin-left: auto;
+    width: 200px;
+}
+.filters__legend {
     margin-bottom: -45px;
 }
 .filters__fieldset {
@@ -988,19 +997,21 @@ a {
     padding-left: 39px;
 }
 .catalog {
-    width: 972px;
+    flex-grow: 1;
     padding-bottom: 77px;
 }
 .catalog__header {
     height: 70px;
     padding-left: 73px;
-    padding-right: 140px;
-}
-.sort {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
+.sort__container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
 .sort__list {
     display: flex;
     justify-content: space-between;
@@ -1017,7 +1028,6 @@ a {
     margin: 0;
     width: 760px;
     padding-top: 20px;
-    padding-right: 140px;
     padding-left: 72px;
     padding-bottom: 41px;
 }
