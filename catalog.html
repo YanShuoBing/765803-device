@@ -16,21 +16,21 @@
         <img class="logo-link__image" src="img/header-logo.svg" width="164" height="36" alt="Текстовый логотип интернет-магазина &laquo;Device&raquo;.">
       </a>
       <ul class="user-nav-list page-header__nav-list">
-        <li class="user-nav-list__item user-nav-list__search-form">
+        <li class="user-nav-list__item user-nav-list__item--search">
           <form class="search-form">
             <input class="search-form__search" type="search" placeholder="Поиск по сайту">
             <input class="search-form__submit" type="submit" value="Найти">
           </form>
         </li>
-        <li class="user-nav-list__item user-nav-list__account">
-          <a class="user-nav-list__link user-nav-list__username" href="#">Валентин Петухов</a>
-          <a class="user-nav-list__link user-nav-list__sign-out" href="#">Выйти</a>
+        <li class="user-nav-list__item user-nav-list__item--account">
+          <a class="user-nav-list__link user-nav-list__link--account" href="#">Валентин Петухов</a>
+          <a class="user-nav-list__link user-nav-list__link--sign-out" href="#">Выйти</a>
         </li>
-        <li class="user-nav-list__item user-nav-list__compare">
-          <a class="user-nav-list__link" href="#">Сравнить</a>
+        <li class="user-nav-list__item user-nav-list__item--compare">
+          <a class="user-nav-list__link user-nav-list__link--compare" href="#">Сравнить</a>
         </li>
-        <li class="user-nav-list__item">
-          <a class="user-nav-list__link" href="#">Корзина</a>
+        <li class="user-nav-list__item user-nav-list__item--cart">
+          <a class="user-nav-list__link user-nav-list__link--cart" href="#">Корзина</a>
         </li>
       </ul>
       <ul class="site-nav-list page-header__nav-list">
@@ -40,7 +40,7 @@
         <li class="site-nav-list__item site-nav-list__delivery">
           <a class="site-nav-list__link" href="#">Доставка</a>
         </li>
-        <li class="site-nav-list__item site-nav-list__guarantee">
+        <li class="site-nav-list__item site-nav-list__warranty">
           <a class="site-nav-list__link" href="#">Гарантия</a>
         </li>
         <li class="site-nav-list__item">
@@ -96,30 +96,33 @@
       <form class="filters__form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="filters__fieldset">
           <legend class="filters__legend">Стоимость</legend>
-          <label class="filters__label visually-hidden">
-            <input class="filters__range visually-hidden" type="range" name="min-price">Минимальная цена</label>
-          <label class="filters__label visually-hidden">
-            <input class="filters__range visually-hidden" type="range" name="max-price">Максимальная цена</label>
+          <div class="filters__range range">
+              <div class="range__scale">
+                <div class="range__bar"></div>
+              </div>
+              <div class="range__toggle range__toggle--min"></div>
+              <div class="range__toggle range__toggle--max"></div>
+          </div>
         </fieldset>
         <fieldset class="filters__fieldset">
           <legend class="filters__legend">Цвет</legend>
-          <label class="filters__label">
-            <input class="filters__checkbox filters__checkbox--checked visually-hidden" type="checkbox" name="black" checked>Черный</label>
-          <label class="filters__label">
-            <input class="filters__checkbox visually-hidden" type="checkbox" name="white">Белый</label>
-          <label class="filters__label">
-            <input class="filters__checkbox filters__checkbox--checked visually-hidden" type="checkbox" name="blue" checked>Синий</label>
-          <label class="filters__label">
-            <input class="filters__checkbox filters__checkbox--checked visually-hidden" type="checkbox" name="red" checked>Красный</label>
-          <label class="filters__label">
-            <input class="filters__checkbox visually-hidden" type="checkbox" name="pink">Розовый</label>
+          <input class="filters__checkbox visually-hidden" type="checkbox" name="black" id="black" checked>
+          <label class="filters__label filters__label--checkbox" for="black">Черный</label>
+          <input class="filters__checkbox visually-hidden" type="checkbox" name="white" id="white">
+          <label class="filters__label filters__label--checkbox" for="white">Белый</label>
+          <input class="filters__checkbox visually-hidden" type="checkbox" name="blue" id="blue" checked>
+          <label class="filters__label filters__label--checkbox" for="blue">Синий</label>
+          <input class="filters__checkbox visually-hidden" type="checkbox" name="red" id="red" checked>
+          <label class="filters__label filters__label--checkbox" for="red">Красный</label>
+          <input class="filters__checkbox visually-hidden" type="checkbox" name="pink" id="pink">
+          <label class="filters__label filters__label--checkbox" for="pink">Розовый</label>
         </fieldset>
         <fieldset class="filters__fieldset">
           <legend class="filters__legend">Bluetooth</legend>
-          <label class="filters__label">
-            <input class="filters__radio filters__radio--checked visually-hidden" type="radio" name="bluetooth" value="true" checked>Есть</label>
-          <label class="filters__label">
-            <input class="filters__radio visually-hidden" type="radio" name="bluetooth" value="false">Нет</label>
+          <input class="filters__radio visually-hidden" type="radio" name="bluetooth" value="true" id="true" checked>
+          <label class="filters__label filters__label--radio" for="true">Есть</label>
+          <input class="filters__radio visually-hidden" type="radio" name="bluetooth" value="false" id="false">
+          <label class="filters__label filters__label--radio" for="false">Нет</label>
         </fieldset>
         <button class="button filters__button" type="submit">Показать</button>
       </form>
@@ -233,15 +236,15 @@
       <img class="logo-link__image" src="img/footer-logo.svg" width="164" height="36" alt="Текстовый логотип интернет-магазина &laquo;Device&raquo;.">
     </a>
     <ul class="user-nav-list user-nav-list--footer user-nav-list--catalog">
-      <li class="user-nav-list__item user-nav-list__item--footer user-nav-list__account">
-        <a class="user-nav-list__link user-nav-list__link--footer user-nav-list__username" href="#">Валентин Петухов</a>
+      <li class="user-nav-list__item user-nav-list__item--footer user-nav-list__item--account">
+        <a class="user-nav-list__link user-nav-list__link--footer user-nav-list__link--account" href="#">Валентин Петухов</a>
         <a class="user-nav-list__link user-nav-list__link--sign-out" href="#">Выйти</a>
       </li>
-      <li class="user-nav-list__item user-nav-list__item--footer">
-        <a class="user-nav-list__link user-nav-list__link--footer user-nav-list__compare" href="#">Сравнить</a>
+      <li class="user-nav-list__item user-nav-list__item--footer user-nav-list__item--compare">
+        <a class="user-nav-list__link user-nav-list__link--footer user-nav-list__link--compare" href="#">Сравнить</a>
       </li>
-      <li class="user-nav-list__item user-nav-list__item--footer">
-        <a class="user-nav-list__link user-nav-list__link--footer" href="#">Корзина</a>
+      <li class="user-nav-list__item user-nav-list__item--footer user-nav-list__item--cart">
+        <a class="user-nav-list__link user-nav-list__link--footer user-nav-list__link--cart" href="#">Корзина</a>
       </li>
     </ul>
     </div>
@@ -251,7 +254,7 @@
       <li class="site-nav-list__item site-nav-list__item--footer">
         <a class="site-nav-list__link site-nav-list__link--footer site-nav-list__delivery" href="#">Доставка</a>
       </li>
-      <li class="site-nav-list__item site-nav-list__item--footer site-nav-list__guarantee">
+      <li class="site-nav-list__item site-nav-list__item--footer site-nav-list__warranty">
         <a class="site-nav-list__link site-nav-list__link--footer" href="#">Гарантия</a>
       </li>
       <li class="site-nav-list__item site-nav-list__item--footer">
@@ -261,19 +264,30 @@
     <p class="page-footer__phone-number">Тел.: +7 (495) 495-95-95</p>
     </div>
     <div class="page-footer__container page-footer__container--bottom">
-    <ul class="socials-list">
-      <li class="socials-list__item socials-list__item--facebook">
-        <a class="socials-list__link" href="#">Facebook</a>
-      </li>
-      <li class="socials-list__item socials-list__item--instagram">
-        <a class="socials-list__link" href="#">Instagram</a>
-      </li>
-      <li class="socials-list__item socials-list__item--twitter">
-        <a class="socials-list__link" href="#">Twitter</a>
-      </li>
-    </ul>
+      <ul class="socials-list">
+        <li class="socials-list__item socials-list__item--facebook">
+          <a class="socials-list__link" href="#">
+            <span class="visually-hidden">Facebook</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/></svg>
+          </a>
+        </li>
+        <li class="socials-list__item socials-list__item--instagram">
+          <a class="socials-list__link" href="#">
+            <span class="visually-hidden">Instagram</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"/><path d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"/></g></svg>
+          </a>
+        </li>
+        <li class="socials-list__item socials-list__item--twitter">
+          <a class="socials-list__link" href="#">
+            <span class="visually-hidden">Twitter</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/></svg>
+          </a>
+        </li>
+      </ul>
     <a class="academy-logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
-      <img class="academy-logo-link__image" src="img/academy-logo.svg" width="27" height="35" alt="Логотип интерактивных онлайн-курсов HTML Academy в виде квадратной академической шапочки.">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+        <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" fill="#ffc600"/>
+      </svg> 
     </a>
     </div>
   </footer>
