@@ -147,8 +147,12 @@ input[type="radio"].visually-hidden {
     border: none;
     border-bottom: solid 2px transparent;
 }
+.search-form__search::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
 
-.search-form__search:hover {
+.search-form__search:hover,
+.search-form__search:hover::placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -156,6 +160,10 @@ input[type="radio"].visually-hidden {
 .search-form__search:active {
     color: #000000;
     border-bottom: solid 2px #000000;
+}
+.search-form__search:focus::placeholder,
+.search-form__search:active::placeholder {
+    color: #000000;
 }
 
 .search-form__submit {
@@ -1452,7 +1460,7 @@ input[type="radio"].visually-hidden {
     flex-grow: 1;
 }
 .column--filters {
-    min-width: 65px;
+    flex-basis: 65px;
 }
 .column__top {
     height: 70px;
