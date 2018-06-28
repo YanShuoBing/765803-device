@@ -18,7 +18,7 @@
       </a>
       <ul class="user-nav-list page-header__nav-list">
         <li class="user-nav-list__item user-nav-list__item--search">
-          <form class="search-form">
+          <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
             <input class="search-form__search" type="search" placeholder="Поиск по сайту">
             <input class="search-form__submit" type="submit" value="Найти">
           </form>
@@ -35,7 +35,33 @@
       </ul>
       <ul class="site-nav-list page-header__nav-list">
         <li class="site-nav-list__item site-nav-list__catalog-dropdown">
-          <a class="site-nav-list__link" href="catalog.html">Каталог товаров</a>
+          <a class="site-nav-list__link site-nav-list__link--catalog" href="catalog.html">Каталог товаров</a>
+          <div class="catalog-dropdown">
+            <ul class="catalog-dropdown__list">
+              <li class="catalog-dropdown__item">
+                <a class="catalog-dropdown__link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a class="catalog-dropdown__link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a class="catalog-dropdown__link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="catalog-dropdown__list">
+              <li class="catalog-dropdown__item">
+                <a class="catalog-dropdown__link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a class="catalog-dropdown__link" href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="catalog-dropdown__list">
+              <li class="catalog-dropdown__item">
+                <a class="catalog-dropdown__link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="site-nav-list__item site-nav-list__delivery">
           <a class="site-nav-list__link" href="#">Доставка</a>
@@ -47,39 +73,13 @@
           <a class="site-nav-list__link" href="#">Контакты</a>
         </li>
       </ul>
-      <div class="catalog-dropdown visually-hidden">
-        <ul class="catalog-dropdown__list">
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Виртуальная реальность</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Моноподы для селфи</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Экшн-камеры</a>
-          </li>
-        </ul>
-        <ul class="catalog-dropdown__list">
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Фитнес-браслеты</a>
-          </li>
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Умные часы</a>
-          </li>
-        </ul>
-        <ul class="catalog-dropdown__list">
-          <li class="catalog-dropdown__item">
-            <a class="catalog-dropdown__link" href="#">Квадрокоптеры</a>
-          </li>
-        </ul>
-      </div>
     </nav>
   </header>
   <main class="inner-page__content inner-page__content--index page-content" id="page-content">
     <section class="popular section">
       <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="popular__slider slider">
-        <li class="slider__item slider__item--selfie-monopod visually-hidden">
+        <li class="slider__item slider__item--selfie-monopod">
           <img class="slider__image slider__image--selfie-monopod" src="img/slider-1.png" width="384" height="486" alt="Селфи-палка.">
           <div class="slider__description">
           <p class="section__title popular__title popular__title--selfie-monopod">Делай селфи,
@@ -117,7 +117,7 @@
           </table>
           </div>
         </li>
-        <li class="slider__item slider__item--quadrocopter">
+        <li class="slider__item slider__item--quadrocopter visually-hidden">
           <img class="slider__image slider__image--quadrocopter" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер.">
           <div class="slider__description">
           <p class="section__title popular__title popular__title--quadrocopter">Порхает как бабочка, жалит как пчела!</p>
@@ -136,6 +136,11 @@
           </div>
         </li>
       </ul>
+      <div class="controls popular__controls">
+          <button class="controls__button controls__button--current" type="button"><span class="visually-hidden">Первый слайд</span></button>
+          <button class="controls__button" type="button"><span class="visually-hidden">Второй слайд</span></button>
+          <button class="controls__button" type="button"><span class="visually-hidden">Третий слайд</span></button>
+      </div>
     </section>
     <section class="categories section">
       <h2 class="visually-hidden">Разделы каталога</h2>
@@ -183,7 +188,7 @@
       <div class="section__wrapper features__wrapper">
       <ul class="features__menu">
         <li class="features__item features__item--current">
-          <button class="button features__button" type="button">Доставка</button>
+          <button class="button features__button features__button--current" type="button">Доставка</button>
         </li>
         <li class="features__item">
           <button class="button features__button" type="button">Гарантия</button>
@@ -216,23 +221,23 @@
       <div class="section__wrapper">
       <ul class="brands__list">
         <li class="brands__item">
-          <a class="brands__link" href="#">
-            <img class="brands__image" src="img/brands-1.png" alt="DJI." width="260" height="100">
+          <a class="brands__link brands__link--dji" href="#">
+            <img class="brands__image" src="img/brands-grayscale-1.png" alt="DJI." width="260" height="100">
           </a>
         </li>
         <li class="brands__item">
-          <a class="brands__link" href="#">
-            <img class="brands__image" src="img/brands-2.png" alt="SP Gadgets." width="260" height="100">
+          <a class="brands__link brands__link--sp-gadgets" href="#">
+            <img class="brands__image" src="img/brands-grayscale-2.png" alt="SP Gadgets." width="260" height="100">
           </a>
         </li>
         <li class="brands__item">
-          <a class="brands__link" href="#">
-            <img class="brands__image" src="img/brands-3.png" alt="GoPro." width="260" height="100">
+          <a class="brands__link brands__link--gopro" href="#">
+            <img class="brands__image" src="img/brands-grayscale-3.png" alt="GoPro." width="260" height="100">
           </a>
         </li>
         <li class="brands__item">
-          <a class="brands__link" href="#">
-            <img class="brands__image" src="img/brands-4.png" alt="Vive." width="260" height="100">
+          <a class="brands__link brands__link--vive" href="#">
+            <img class="brands__image" src="img/brands-grayscale-4.png" alt="Vive." width="260" height="100">
           </a>
         </li>
       </ul>
@@ -265,6 +270,7 @@
     </div>
   </main>
   <footer class="inner-page__footer page-footer">
+    <div class="page-footer__inner">
       <div class="page-footer__container page-footer__container--top">
       <a class="logo-link" href="index.html">
         <img class="logo-link__image" src="img/footer-logo.svg" width="164" height="36" alt="Текстовый логотип интернет-магазина &laquo;Device&raquo;.">
@@ -323,6 +329,7 @@
         </svg>    
       </a>
       </div>
+    </div>
     </footer>
   <section class="location section visually-hidden">
     <h2 class="visually-hidden">Адрес магазина</h2>
