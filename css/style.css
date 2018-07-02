@@ -1788,7 +1788,7 @@ input[type="radio"].visually-hidden {
 .goods-card__picture {
     position: relative;
 }
-.goods-card__picture:hover .goods-card__buttons{
+.goods-card__picture:hover .goods-card__buttons {
     visibility: visible;
 }
 .goods-card__buttons {
@@ -1802,8 +1802,10 @@ input[type="radio"].visually-hidden {
     visibility: hidden;
     width: 100%;
     height: 380px;
-    padding-top: 25px;
     background-color: rgba(238, 238, 238, 0.7);
+}
+.goods-card__button {
+    margin-top: 50px;
 }
 .goods-card__compare {
     margin-top: 10px;
