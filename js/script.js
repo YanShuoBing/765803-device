@@ -1,10 +1,12 @@
 var servicesButton 
 
-var map = document.querySelector(".overlay--location");
+var overlay = document.querySelector(".overlay");
+
+var map = document.querySelector(".location");
 var mapOpen = document.querySelector(".contacts__link");
 var mapClose = map.querySelector(".popup__close");
 
-var feedback = document.querySelector(".overlay--write-us");
+var feedback = document.querySelector(".write-us");
 var feedbackOpen = document.querySelector(".contacts__button");
 var feedbackForm = feedback.querySelector(".write-us__form");
 var feedbackFullName = feedback.querySelector(".write-us__full-name");
@@ -20,36 +22,36 @@ try {
     storageFullName = localStorage.getItem("name");
     storageEmail = localStorage.getItem("email");
 }
-catch {
+catch (err) {
     isStorageSupport = false;
 }
 
-map.addEventListener("click", function (evt) {
-    map.classList.remove("overlay--show");
-});
 mapOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
-    map.classList.add("overlay--show");
+    overlay.classList.add("overlay--show");
+    map.classList.add("popup--show");
 });
 mapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    map.classList.remove("overlay--show");
+    overlay.classList.remove("overlay--show");
+    map.classList.remove("popup--show");
+    map.classList.remove("popup--error");
 });
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-        if (map.classList.contains("overlay--show")) {
+        if (map.classList.contains("popup--show")) {
             evt.preventDefault();
-            map.classList.remove("overlay--show");
+            overlay.classList.remove("overlay--show");
+            map.classList.remove("popup--show");
+            map.classList.remove("popup--error");
         }
     }
 });
 
-feedback.addEventListener("click", function (evt) {
-    feedback.classList.remove("overlay--show");
-});
 feedbackOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
-    feedback.classList.add("overlay--show");
+    overlay.classList.add("overlay--show");
+    feedback.classList.add("popup--show");
     feedbackFullName.focus();
     if (storageFullName) {
         feedbackFullName.value = storageFullName;
@@ -65,6 +67,9 @@ feedbackOpen.addEventListener("click", function (evt) {
 feedbackForm.addEventListener("submit", function (evt) {
     if (!feedbackFullName.value || !feedbackEmail.value || !feedbackMessage.value) {
         evt.preventDefault();
+        feedback.classList.remove("popup--error");
+        feedback.offsetWidth = feedback.offsetWidth;
+        feedback.classList.add("popup--error");
     } else {
         if (isStorageSupport) {
             localStorage.setItem("name", feedbackFullName.value);
@@ -74,13 +79,25 @@ feedbackForm.addEventListener("submit", function (evt) {
 });
 feedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
-    feedback.classList.remove("overlay--show");
+    overlay.classList.remove("overlay--show");
+    feedback.classList.remove("popup--show");
+    feedback.classList.remove("popup--error");
 });
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
-        if (feedback.classList.contains("overlay--show")) {
+        if (feedback.classList.contains("popup--show")) {
             evt.preventDefault();
-            feedback.classList.remove("overlay--show");
+            overlay.classList.remove("overlay--show");
+            feedback.classList.remove("popup--show");
+            feedback.classList.remove("popup-error");
         }
     }
+});
+
+overlay.addEventListener("click", function (evt) {
+    overlay.classList.remove("overlay--show");
+    map.classList.remove("popup--show");
+    mar.classList.remove("popup--error");
+    feedback.classList.remove("popup--show");
+    feedback.classList.remove("popup--error");
 });
