@@ -44,6 +44,9 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
+feedback.addEventListener("click", function (evt) {
+    feedback.classList.remove("overlay--show");
+});
 feedbackOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedback.classList.add("overlay--show");
