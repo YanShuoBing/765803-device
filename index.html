@@ -188,14 +188,14 @@
       <h2 class="visually-hidden">Преимущества</h2>
       <div class="section__wrapper features__wrapper">
       <ul class="features__menu">
-        <li class="features__item features__item--current">
-          <button class="button features__button features__button--current" type="button">Доставка</button>
+        <li class="features__item features__item--delivery features__item--current">
+          <button class="button features__button features__button--delivery features__button--current" type="button">Доставка</button>
         </li>
-        <li class="features__item">
-          <button class="button features__button" type="button">Гарантия</button>
+        <li class="features__item features__item--warranty">
+          <button class="button features__button features__button--warranty" type="button">Гарантия</button>
         </li>
-        <li class="features__item">
-          <button class="button features__button" type="button">Кредит</button>
+        <li class="features__item features__item--credit">
+          <button class="button features__button features__button--credit" type="button">Кредит</button>
         </li>
       </ul>
       <ul class="features__slider">
@@ -332,7 +332,7 @@
       </div>
     </div>
     </footer>
-  <div class="overlay visually-hidden">
+  <div class="overlay overlay--location">
   <section class="location popup">
     <h2 class="visually-hidden">Адрес магазина</h2>
     <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.11237494732!2d37.52742931545036!3d55.68703400453063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1530294420170" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -342,16 +342,16 @@
     </button>
   </section>
   </div>
-  <div class="overlay visually-hidden">
+  <div class="overlay overlay--write-us">
   <section class="write-us popup">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <form class="write-us__form" method="post"
     action="https://echo.htmlacademy.ru">
       <label class="write-us__label write-us__label--full-name">Ваше имя:
-        <input class="write-us__input" type="text" name="full-name" placeholder="Имя Фамилия">
+        <input class="write-us__input write-us__full-name" type="text" name="full-name" placeholder="Имя Фамилия">
       </label>
       <label class="write-us__label write-us__label--email">Ваш e-mail:
-        <input class="write-us__input" type="email" name="email" placeholder="email@example.com">
+        <input class="write-us__input write-us__email" type="email" name="email" placeholder="email@example.com">
       </label>
       <label class="write-us__label write-us__label--message">Текст письма:
         <textarea class="write-us__textarea" name="message" placeholder="В свободной форме"></textarea>
@@ -363,6 +363,7 @@
       </button>
   </section>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

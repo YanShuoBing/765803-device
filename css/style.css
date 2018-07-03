@@ -390,9 +390,14 @@ input[type="radio"].visually-hidden {
     overflow: auto;
     left: 0;
     top: 0;
+    display: none;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay--show {
+    display: block;
 }
 
 .popup {
@@ -428,7 +433,7 @@ input[type="radio"].visually-hidden {
 }
 .location__map {
     border: none;
-}
+} 
 
 .write-us {
     box-sizing: border-box;
