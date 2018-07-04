@@ -56,7 +56,6 @@ for (var i = 0; i < featuresControls.length; i++) {
         evt.preventDefault ();
         if (!this.classList.contains("features__button--current")) {
             featuresCurrent.classList.remove("features__button--current");
-            featuresItemCurrent.classList.remove("features__item--current");
             featuresCurrent = this;
             this.classList.add("features__button--current");
 
@@ -64,7 +63,6 @@ for (var i = 0; i < featuresControls.length; i++) {
                 if (featuresControls[j].classList.contains("features__button--current")) {
                     featuresShow.classList.remove("features__slide--show");
                     featuresSlides[j].classList.add("features__slide--show");
-                    featuresItem[j].classList.add("features__item--current");
                     featuresShow = featuresSlides[j];
         }
       }
@@ -80,12 +78,6 @@ catch (err) {
     isStorageSupport = false;
 }
 
-mapOpen.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    overlay.classList.add("overlay--show");
-    map.classList.add("popup--show");
-});
-
 function initMap() {
     mapPreview = new google.maps.Map(document.querySelector(".contacts__link"), {
         center: {lat: 55.687031, lng: 37.52961800000003},
@@ -99,6 +91,13 @@ function initMap() {
         });
     mapFullMarker = new google.maps.Marker({position: {lat: 55.687031, lng: 37.52961800000003}, map: mapFull});
 }
+
+mapOpen.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    overlay.classList.add("overlay--show");
+    map.classList.add("popup--show");
+    initMap();
+});
 
 mapClose.addEventListener("click", function (evt) {
     evt.preventDefault();

@@ -94,7 +94,24 @@ a {
 .button:active {
     color: rgba(0, 0, 0, 0.3);
 }
+
+.features__button {
+    width: 160px;
+}
 .features__button:active:not(.features__button--current) {
+    background: #000000;
+}
+.features__button--current {
+    position: relative;
+    background: #000000;
+    color: #f7e184;
+}
+.features__button--current::after {
+    content: "";
+    position: absolute;
+    left: 160px;
+    width: 117px;
+    height: 40px;
     background: #000000;
 }
 
@@ -854,15 +871,13 @@ input[type="radio"].visually-hidden {
     justify-content: center;
     align-items: center;
     height: 40px;
+    padding: 0;
     cursor: pointer;
     outline: none;
 }
 .popular__button {
     width: 220px;
     margin-top: 42px;
-}
-.features__button {
-    width: 160px;
 }
 .about-us__button,
 .contacts__button {
@@ -1233,30 +1248,30 @@ input[type="radio"].visually-hidden {
 }
 .slider__item--selfie-monopod::before {  
     content: "01";
-    top: -12px;
-    right: 18px;
+    top: -15px;
+    right: -11px;
 }
 .slider__item--fitness-tracker {
     position: relative;
-    padding-top: 15px;
+    padding-top: 11px;
     padding-left: 20px;
-    padding-bottom: 76px;
+    padding-bottom: 80px;
 }
 .slider__item--fitness-tracker::before {  
     content: "02";
-    top: -12px;
-    right: 28px;
+    top: -15px;
+    right: 10px;
 }
 .slider__item--quadrocopter {
     position: relative;
     padding-top: 66px;
     padding-right: 50px;
-    padding-bottom: 88px;
+    padding-bottom: 97px;
 }
 .slider__item--quadrocopter::before {  
     content: "03";
-    top: -12px;
-    right: 40px;
+    top: -15px;
+    right: 42px;
 }
 .slider__image {
     flex-shrink: 0;
@@ -1264,24 +1279,26 @@ input[type="radio"].visually-hidden {
 .slider__image--selfie-monopod {
     width: 384px;
     height: 486px;
-    margin-left: 30px;
+    margin-left: 58px;
     margin-right: 125px;
 }
 .slider__image--fitness-tracker {
     width: 345px;
     height: 485px;
-    margin-left: 43px;
+    margin-left: 62px;
     margin-right: 138px;
 }
 .slider__image--quadrocopter {
     width: 526px;
     height: 334px;
-    margin-left: 0;
     margin-right: 42px;
+    margin-left: -3px;
 }
 .popular {
     position: relative;
     padding-left: 34px;
+    width: 1160px;
+    box-sizing: border-box;
 }
 .popular__title {
     margin-bottom: 0;
@@ -1290,16 +1307,13 @@ input[type="radio"].visually-hidden {
     margin-top: 79px;
 }
 .popular__title--fitness-tracker {
-    margin-top: 65px;
+    margin-top: 67px;
 }
 .popular__title--quadrocopter {
     margin-top: 13px;
 }
 .popular__text {
     margin-top: 19px;
-}
-.popular__text--quadrocopter {
-    margin-top: 28px;
 }
 .stats-table {
     margin-top: 54px;
@@ -1308,6 +1322,10 @@ input[type="radio"].visually-hidden {
 .stats-table__bottom-cell {
     padding: 0;
     padding-left: 76px;
+}
+.stats-table--quadrocopter .stats-table__top-cell,
+.stats-table--quadrocopter .stats-table__bottom-cell {
+    padding-left: 47px;
 }
 .stats-table__bottom-cell {
     padding-top: 9px;
@@ -1318,7 +1336,7 @@ input[type="radio"].visually-hidden {
 }
 .controls {
     position: absolute;
-    right: 53px;
+    right: 82px;
     bottom: 238px;
     display: flex;
     justify-content: space-between;
@@ -1364,7 +1382,7 @@ input[type="radio"].visually-hidden {
     position: relative;
     height: 160px;
     width: 100%;
-    margin-bottom: 31px;
+    margin-bottom: 30px;
 }
 .categories__icon--virtual-reality::before {
     content: "";
@@ -1443,13 +1461,6 @@ input[type="radio"].visually-hidden {
 }
 .features__item:not(:first-child) {
     margin-top: 24px;
-}
-.features__item--current {
-    background-color: #000000;
-}
-.features__item--current .features__button {
-    background-color: #000000;
-    color: #f7e184;
 }
 
 .features__slider {
