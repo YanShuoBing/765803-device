@@ -80,7 +80,7 @@
     <section class="popular section">
       <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="popular__slider slider">
-        <li class="slider__item slider__item--selfie-monopod">
+        <li class="slider__item slider__item--selfie-monopod slider__item--show">
           <img class="slider__image slider__image--selfie-monopod" src="img/slider-1.png" width="384" height="486" alt="Селфи-палка.">
           <div class="slider__description">
           <p class="section__title popular__title popular__title--selfie-monopod">Делай селфи,
@@ -101,7 +101,7 @@
           </table>
           </div>
         </li>
-        <li class="slider__item slider__item--fitness-tracker visually-hidden">
+        <li class="slider__item slider__item--fitness-tracker">
           <img class="slider__image slider__image--fitness-tracker" src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет.">
           <div class="slider__description">
           <p class="section__title popular__title popular__title--fitness-tracker">Худеем
@@ -118,7 +118,7 @@
           </table>
           </div>
         </li>
-        <li class="slider__item slider__item--quadrocopter visually-hidden">
+        <li class="slider__item slider__item--quadrocopter">
           <img class="slider__image slider__image--quadrocopter" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер.">
           <div class="slider__description">
           <p class="section__title popular__title popular__title--quadrocopter">Порхает как бабочка, жалит как пчела!</p>
@@ -199,17 +199,17 @@
         </li>
       </ul>
       <ul class="features__slider">
-        <li class="features__slide features__slide--delivery">
+        <li class="features__slide features__slide--delivery features__slide--show">
           <h3 class="section__title section__title--index features__title">Доставка</h3>
           <p class="section__text features__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
             поднимая его на ваш этаж.</p>
         </li>
-        <li class="features__slide features__slide--warranty visually-hidden">
+        <li class="features__slide features__slide--warranty">
           <h3 class="section__title section__title--index features__title">Гарантия</h3>
           <p class="section__text features__text">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.
             <br>Товар, не дом, конечно же.</p>
         </li>
-        <li class="features__slide features__slide--credit visually-hidden">
+        <li class="features__slide features__slide--credit">
           <h3 class="section__title section__title--index features__title">Кредит</h3>
           <p class="section__text features__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
             Выгодные для нашего банка, разумеется.</p>
@@ -334,8 +334,7 @@
     </footer>
   <section class="location popup">
     <h2 class="visually-hidden">Адрес магазина</h2>
-    <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.11237494732!2d37.52742931545036!3d55.68703400453063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1530294420170" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
-    <!-- Подключение карты с помощью Google Maps JavaScript API реализую в следующем разделе -->
+    <div class="location__map"></div>
     <button class="popup__close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
@@ -360,6 +359,7 @@
       </button>
   </section>
   <div class="overlay"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvlpWrEjvURy9a_BwiaudYIc0c-C_UaJQ&callback=initMap" async defer></script>
   <script src="js/script.js"></script>
 </body>
 
