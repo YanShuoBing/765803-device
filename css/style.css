@@ -218,7 +218,7 @@ a {
     background:         linear-gradient(to bottom, transparent 0, #f0c52e 0, #f0c52e 40px, transparent 40px);
 }
 
-.button:active {
+.button:active:not(.features__button--current) {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -375,7 +375,10 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form__search:focus + .search-form__submit,
-.search-form__search:active + .search-form__submit {
+.search-form__search:active + .search-form__submit,
+.search-form__submit:hover,
+.search-form__submit:active,
+.search-form__submit:focus {
     visibility: visible;
 }
 
@@ -1360,6 +1363,7 @@ input[type="radio"].visually-hidden {
 .features__button--current::after {
     content: "";
     position: absolute;
+    top: 0;
     left: 160px;
 
     width: 117px;
@@ -2314,7 +2318,7 @@ input[type="radio"].visually-hidden {
 .sort__item {
     display: inline-block;
 
-    vertical-align: top;
+    vertical-align: center;
 }
 
 .sort__link {
